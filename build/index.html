@@ -1,13 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-  <h1>Добро пожаловать в Лигу А.</h1>
-</body>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>МонтСтрой</title>
+    <link href="css/style.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <h1 class="visually-hidden">Добро пожаловать на сайт МонтСтрой</h1>
+    <header class="page-header">
+      <nav class="page-nav">
+        <a class="page-nav__logo" href="#">
+          <img class="page-nav__image" src="img/icon-logo.svg" width="141" height="60" alt="логотип МонтСтрой">
+        </a>
+        <svg class="page-nav__menu" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="23" viewBox="0 0 28 23">
+          <defs>
+            <style>
+              .cls-1 {
+                filter: url(#filter);
+              }
+
+              .cls-2, .cls-3 {
+                fill: #fff;
+                stroke: #fff;
+                stroke-linecap: round;
+                stroke-width: 2px;
+                fill-rule: evenodd;
+                opacity: 0.3;
+              }
+
+              .cls-3 {
+                filter: url(#filter-2);
+              }
+            </style>
+            <filter id="filter" filterUnits="userSpaceOnUse">
+              <feFlood result="flood"></feFlood>
+              <feComposite result="composite" operator="in" in2="SourceGraphic"></feComposite>
+              <feBlend result="blend" in2="SourceGraphic"></feBlend>
+            </filter>
+            <filter id="filter-2" x="188" y="36" width="26" height="2" filterUnits="userSpaceOnUse">
+              <feFlood result="flood"></feFlood>
+              <feComposite result="composite" operator="in" in2="SourceGraphic"></feComposite>
+              <feBlend result="blend" in2="SourceGraphic"></feBlend>
+            </filter>
+          </defs>
+          <g id="Меню" class="cls-1">
+            <path id="бургер1" class="cls-2" d="M189,17h24" transform="translate(-187 -16)"></path>
+            <path id="бургер2" class="cls-2" d="M189,27h24" transform="translate(-187 -16)"></path>
+            <g transform="translate(-187 -16)" style="fill: #fff; filter: url(#filter-2)">
+              <path id="бургер3" class="cls-3" d="M189,36h24" style="stroke: inherit; filter: none; fill: inherit"></path>
+            </g>
+            <use transform="translate(-187 -16)" xlink:href="#бургер3" style="stroke: #fff; filter: none; fill: none"></use>
+          </g>
+        </svg>
+        <ul class="page-nav__list">
+          <li class="page-nav__item">
+            <a class="page-nav__link" href="#">главная</a>
+          </li>
+          <li class="page-nav__item">
+            <a class="page-nav__link" href="#">услуги</a>
+          </li>
+          <li class="page-nav__item">
+            <a class="page-nav__link" href="#">проекты</a>
+          </li>
+          <li class="page-nav__item">
+            <a class="page-nav__link" href="#">партнеры</a>
+          </li>
+          <li class="page-nav__item">
+            <a class="page-nav__link" href="#">контакты</a>
+          </li>
+        </ul>
+        <a class="page-nav__phone" href="tel:+74954526723">+7 (495) 452-67-23</a>
+        <a class="page-nav__button" href="#">Обратная связь</a>
+      </nav>
+    </header>
+    <main></main>
+    <footer></footer>
+  </body>
 </html>
