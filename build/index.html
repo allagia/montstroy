@@ -35,22 +35,63 @@
         <a class="page-nav__button" href="#">Обратная связь</a>
       </nav>
     </header>
-    <main></main>
+    <main>
       <h1 class="visually-hidden">Добро пожаловать на сайт МонтСтрой</h1>
       <section class="banner">
-        <h2>строительно-монтажные работы</h2>
-        <p>Компания ЗАО «НCП «МонтCтрой» успешно работает на российском рынке с 1992 года</p>
-        <p>, и за это время зарекомендовало себя как ведущий разработчик качественных систем установок для предприятий, выполняет полный комплекс строительно-монтажных и пуско-наладочных работ по электроснабжению зданий и сооружений.</p>
-        <a href="#">наши услуги</a>
-        <a href="#">связаться с нами</a>
+        <div class="banner__content">
+          <h2 class="banner__title">строительно-монтажные работы</h2>
+          <p class="banner__text banner__text--tagline">Компания ЗАО «НCП «МонтCтрой» успешно работает на российском рынке с 1992 года<span>,</span></p>
+          <p class="banner__text banner__text--other">и за это время зарекомендовало себя как ведущий разработчик качественных систем установок для предприятий, выполняет полный комплекс строительно-монтажных и пуско-наладочных работ по электроснабжению зданий и сооружений.</p>
+          <div class="banner__buttons">
+            <a class="banner__service-button" href="#">наши услуги</a>
+            <a class="banner__contact-button" href="#">связаться с нами</a>
+          </div>
+        </div>
       </section>
       <section class="advantages">
-        <ul>
-          <li>Гарантированное высокое качество продукции</li>
-          <li>Исполнение всех сроков и обязательств</li>
-          <li>Собственная производственная  база</li>
+        <ul class="advantages__list">
+          <li class="advantages__item advantages__item--like">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="62" height="64" viewBox="0 0 62 64">
+              <defs>
+                <style>
+                  .cls-1 {
+                    opacity: 0.7;
+                  }
+                </style>
+              </defs>
+              <image id="like" class="cls-1" width="62" height="64" xlink:href="data:img/png;base64,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"></image>
+            </svg>
+            <p>Гарантированное высокое качество продукции</p>
+          </li>
+          <li class="advantages__item advantages__item--handshake">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="74" height="49" viewBox="0 0 74 49">
+              <defs>
+                <style>
+                  .cls-1 {
+                    opacity: 0.7;
+                  }
+                </style>
+              </defs>
+              <image id="handshake" class="cls-1" width="74" height="49" xlink:href="data:img/png;base64,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"></image>
+            </svg>
+            <p>Исполнение всех сроков и обязательств</p>
+          </li>
+          <li class="advantages__item advantages__item--settings">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="70" height="69" viewBox="0 0 70 69">
+              <defs>
+                <style>
+                  .cls-1 {
+                    opacity: 0.7;
+                  }
+                </style>
+              </defs>
+              <image id="settings" class="cls-1" width="70" height="69" xlink:href="data:img/png;base64,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"></image>
+            </svg>
+            <p>Собственная производственная  база</p>
+          </li>
         </ul>
       </section>
+    </main>
     <footer></footer>
     <script src="js/app.js"></script>
   </body>

@@ -1,0 +1,55 @@
+.advantages {
+  background-color: transparent;
+  margin: -209px 0 0;
+
+  &__list {
+    display: flex;
+
+    @include list-reset;
+
+    max-width: 1256px;
+    padding: 0 35px;
+    margin: 0 auto;
+  }
+
+  &__item {
+    font-size: 15px;
+    line-height: 1.333;
+    text-align: center;
+
+    margin: 0 auto 0 0;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    &--like {
+      // max-width: 200px;
+      width: 17%;
+      padding: 3px 0 0 5px;
+
+      & p {
+        margin: 20px 0 0 0;
+      }
+    }
+
+    &--handshake {
+      // max-width: 174px;
+      width: 16%;
+      padding: 16px 0 0 18px;
+
+      & p {
+        margin: 22px 0 0 0;
+      }
+    }
+
+    &--settings {
+      // max-width: 250px;
+      width: 20%;
+      padding: 0 0 0 4px;
+      margin: 0;
+
+      & p {
+        margin: 18px 0 0 0;
+      }
+    }
+  }
+}
