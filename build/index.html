@@ -8,53 +8,13 @@
     <link href="css/style.min.css" rel="stylesheet">
   </head>
   <body>
-    <h1 class="visually-hidden">Добро пожаловать на сайт МонтСтрой</h1>
     <header class="page-header">
       <nav class="page-nav">
         <a class="page-nav__logo" href="#">
           <img class="page-nav__image" src="img/icon-logo.svg" width="141" height="60" alt="логотип МонтСтрой">
         </a>
-        <svg class="page-nav__menu" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="28" height="23" viewBox="0 0 28 23">
-          <defs>
-            <style>
-              .cls-1 {
-                filter: url(#filter);
-              }
-
-              .cls-2, .cls-3 {
-                fill: #fff;
-                stroke: #fff;
-                stroke-linecap: round;
-                stroke-width: 2px;
-                fill-rule: evenodd;
-                opacity: 0.3;
-              }
-
-              .cls-3 {
-                filter: url(#filter-2);
-              }
-            </style>
-            <filter id="filter" filterUnits="userSpaceOnUse">
-              <feFlood result="flood"></feFlood>
-              <feComposite result="composite" operator="in" in2="SourceGraphic"></feComposite>
-              <feBlend result="blend" in2="SourceGraphic"></feBlend>
-            </filter>
-            <filter id="filter-2" x="188" y="36" width="26" height="2" filterUnits="userSpaceOnUse">
-              <feFlood result="flood"></feFlood>
-              <feComposite result="composite" operator="in" in2="SourceGraphic"></feComposite>
-              <feBlend result="blend" in2="SourceGraphic"></feBlend>
-            </filter>
-          </defs>
-          <g id="Меню" class="cls-1">
-            <path id="бургер1" class="cls-2" d="M189,17h24" transform="translate(-187 -16)"></path>
-            <path id="бургер2" class="cls-2" d="M189,27h24" transform="translate(-187 -16)"></path>
-            <g transform="translate(-187 -16)" style="fill: #fff; filter: url(#filter-2)">
-              <path id="бургер3" class="cls-3" d="M189,36h24" style="stroke: inherit; filter: none; fill: inherit"></path>
-            </g>
-            <use transform="translate(-187 -16)" xlink:href="#бургер3" style="stroke: #fff; filter: none; fill: none"></use>
-          </g>
-        </svg>
-        <ul class="page-nav__list">
+        <button class="page-nav__toggle" type="button"></button>
+        <ul class="page-nav__list page-nav__list--closed">
           <li class="page-nav__item">
             <a class="page-nav__link" href="#">главная</a>
           </li>
@@ -76,6 +36,22 @@
       </nav>
     </header>
     <main></main>
+      <h1 class="visually-hidden">Добро пожаловать на сайт МонтСтрой</h1>
+      <section class="banner">
+        <h2>строительно-монтажные работы</h2>
+        <p>Компания ЗАО «НCП «МонтCтрой» успешно работает на российском рынке с 1992 года</p>
+        <p>, и за это время зарекомендовало себя как ведущий разработчик качественных систем установок для предприятий, выполняет полный комплекс строительно-монтажных и пуско-наладочных работ по электроснабжению зданий и сооружений.</p>
+        <a href="#">наши услуги</a>
+        <a href="#">связаться с нами</a>
+      </section>
+      <section class="advantages">
+        <ul>
+          <li>Гарантированное высокое качество продукции</li>
+          <li>Исполнение всех сроков и обязательств</li>
+          <li>Собственная производственная  база</li>
+        </ul>
+      </section>
     <footer></footer>
+    <script src="js/app.js"></script>
   </body>
 </html>
