@@ -3,6 +3,8 @@
   color: rgb(255, 255, 254);
   background-image: linear-gradient(90deg, rgba(5, 5, 5, 0) 0%, rgba(5, 5, 5, 0) 100%), url("../img/background-desktop@1x.png");
   background-position-y: -100px;
+  background-repeat: no-repeat;
+  background-size: cover;
 
 
   &__content {
@@ -27,6 +29,10 @@
 
     max-width: 1018px;
     margin: 22px 0 57px 0;
+  }
+
+  &__tagline {
+    display: none;
   }
 
   &__buttons {
@@ -117,6 +123,80 @@
       width: 290px;
       height: 55px;
       padding: 10px 0 0 0;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .banner {
+    background-image: linear-gradient(90deg, rgba(5, 5, 5, 0) 0%, rgba(5, 5, 5, 0) 100%), url("../img/background-mobile@1x.png");
+    background-position: 0 -49px;
+
+    &__content {
+      max-width: 100%;
+      padding: 128px 20px 52px;
+    }
+
+    &__title {
+      font-size: 16px;
+      letter-spacing: 0.8px;
+
+      text-align: center;
+    }
+
+    &__text {
+      position: absolute;
+      top: 550px;
+      left: 24px;
+
+      font-size: 12px;
+      line-height: 18px;
+
+      max-width: 89%;
+      margin: 0;
+
+      color: #000000;
+    }
+
+    &__tagline {
+      display: block;
+      font-size: 16px;
+
+      margin: 21px 13px 58px 13px;
+
+      text-align: center;
+
+      & span {
+        color: #00ffd7;
+      }
+    }
+
+    &__bottom {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    &__buttons {
+      flex-direction: column;
+
+      font-size: 16px;
+      line-height: 26px;
+
+      width: 100%;
+      margin: 0 auto;
+    }
+
+    &__service-button {
+      width: 100%;
+      height: 60px;
+      padding: 20px 0 0 0;
+      margin: 0 0 10px 0;
+    }
+
+    &__contact-button {
+      width: 100%;
+      height: 60px;
+      padding: 14px 0 0 0;
     }
   }
 }
