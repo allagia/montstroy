@@ -77,7 +77,7 @@
       position: relative;
 
       max-width: 774px;
-      padding: 69px 25px 24px;
+      padding: 47px 25px 7px;
     }
 
     &__item {
@@ -94,6 +94,7 @@
         min-width: 229px;
         height: 163px;
         padding: 24px 20px 0 20px;
+        margin: 20px -10px 0 0;
 
         & p {
           margin: 3px 0 0 0;
@@ -110,12 +111,6 @@
       }
 
       &--handshake {
-        position: absolute;
-        top: 49px;
-        left: 50%;
-        transform: translate(-50%, 0);
-        z-index: 100;
-
         font-size: 14px;
         line-height: 20px;
 
@@ -123,6 +118,8 @@
         min-width: 280px;
         height: 200px;
         padding: 49px 59px 0;
+
+        z-index: 1;
 
         & p {
           min-width: 160px;
@@ -144,7 +141,7 @@
         min-width: 229px;
         height: 163px;
         padding: 20px 23px 0 22px;
-        margin: 0;
+        margin: 19px 0 0 -10px;
 
         & p {
           min-width: 183px;
@@ -198,7 +195,7 @@
   .advantages {
     &__list {
       max-width: 100%;
-      padding: 170px 25px 54px;
+      padding: 219px 20px 5px;
     }
 
     &__item {
@@ -213,8 +210,6 @@
       }
 
       &--handshake {
-        position: relative;
-
         font-size: 14px;
         line-height: 20px;
 
