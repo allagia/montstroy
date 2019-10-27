@@ -1,0 +1,468 @@
+.projects__title {
+  position: relative;
+
+  font-family: "Raleway", "Arial", sans-serif;
+  font-size: 30px;
+  line-height: 50px;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+
+  margin: 25px 0 36px 0;
+
+  color: #000000;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 25px;
+    right: 0;
+
+    width: 74.5%;
+    height: 2px;
+
+    border-top: 2px solid rgb(0, 0, 0);
+  }
+}
+
+.projects__content {
+  max-width: 1250px;
+  padding: 35px 40px 0 40px;
+  margin: 0 auto;
+}
+
+.projects__list {
+  @include list-reset;
+
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.projects__item {
+  display: flex;
+
+  width: 49.8%;
+  min-height: 290px;
+  margin: 0 2px 2px 0;
+
+  & div {
+    background-color: #000000;
+  }
+
+  &:nth-child(2n) {
+    margin: 0 0 2px 0;
+  }
+}
+
+.projects__name {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 900;
+  font-size: 24px;
+  line-height: 1;
+
+  color: rgb(255, 255, 255);
+
+  &--single {
+    font-size: 32px;
+    line-height: 42px;
+
+    & h3 {
+      margin: 32px 0 33px 0;
+    }
+  }
+}
+
+.projects__description {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-size: 15px;
+  line-height: 1.5;
+
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.projects__combination {
+  position: relative;
+
+  width: 50%;
+  padding: 28px 11px 0 30px;
+  margin: 0 2px 0 0;
+
+  background-size: cover;
+
+  &:nth-child(2n) {
+    margin: 0;
+  }
+
+  &--future {
+    background-image: url("../img/future-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/future-desktop@2x.jpg");
+    }
+
+    & h3 {
+      margin: 21px 0 49px 0;
+    }
+  }
+
+  &--halo {
+    background-image: url("../img/halo-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/halo-desktop@2x.jpg");
+    }
+  }
+
+  &--family {
+    background-image: url("../img/family-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/family-desktop@2x.jpg");
+    }
+  }
+
+  &--medial {
+    background-image: url("../img/medial-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/medial-desktop@2x.jpg");
+    }
+
+    & h3 {
+      margin: 21px 0 49px 0;
+    }
+  }
+}
+
+.projects__single {
+  position: relative;
+
+  padding: 8px 68px 0 30px;
+
+  &--energy {
+    background-image: url("../img/energy-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/energy-desktop@2x.jpg");
+    }
+  }
+
+  &--theater {
+    background-image: url("../img/theater-desktop@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/theater-desktop@2x.jpg");
+    }
+  }
+}
+
+.projects__link {
+  position: absolute;
+  display: block;
+
+  right: 12px;
+  bottom: 13px;
+
+  width: 43px;
+  height: 32px;
+  padding: 5px 0 0 11px;
+
+  background-color: transparent;
+  border: 2px solid #ffffff;
+
+  & svg {
+    width: 16px;
+    height: 6px;
+  }
+
+  &:hover {
+    background-color: #00ffd7;
+    border-color: #00ffd7;
+
+    .cls-1 {
+      fill: #000000;
+    }
+  }
+}
+
+@media (max-width: 1023px) {
+  .projects__title {
+    font-size: 26px;
+    line-height: 1;
+
+    margin: 25px 0 44px 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .projects__content {
+    max-width: 94.4%;
+    padding: 48px 0 0 0;
+  }
+
+  .projects__list {
+    flex-direction: column;
+  }
+
+  .projects__item {
+    flex-direction: column;
+    height: auto;
+    min-height: 180px;
+
+    width: 100%;
+    margin: 0 0 9px 0;
+
+    &:nth-child(2n) {
+      margin: 0 0 9px 0;
+    }
+  }
+
+  .projects__combination {
+    width: 100%;
+    height: 50%;
+    min-height: 180px;
+    margin: 0 0 10px 0;
+    padding: 0 100px 0 43px;
+
+    &:nth-child(2n) {
+      margin: 0;
+    }
+
+    &--future {
+      padding: 11px 100px 0 43px;
+
+      background-image: url("../img/future-tablet@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/future-tablet@2x.jpg");
+      }
+
+      & h3 {
+        margin: 21px 0 0 0;
+      }
+    }
+
+    &--halo {
+      padding: 6px 100px 0 43px;
+
+      background-image: url("../img/halo-tablet@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/halo-tablet@2x.jpg");
+      }
+
+      & h3 {
+        margin: 23px 0 5px 0;
+      }
+    }
+
+    &--family {
+      padding: 0 160px 0 43px;
+
+      background-image: url("../img/family-tablet@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/family-tablet@2x.jpg");
+      }
+
+      & h3 {
+        margin: 23px 0 5px 0;
+      }
+    }
+
+    &--medial {
+      padding: 0 130px 0 43px;
+
+      background-image: url("../img/medial-tablet@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/medial-tablet@2x.jpg");
+      }
+
+      & h3 {
+        margin: 21px 0 3px 0;
+      }
+    }
+  }
+
+  .projects__single {
+    height: 180px;
+    padding: 8px 68px 0 43px;
+
+    & span {
+      display: none;
+    }
+
+    & h3 {
+      margin: 23px 0 0 1px;
+    }
+
+    &--energy {
+      background-image: url("../img/energy-tablet@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/energy-tablet@2x.jpg");
+      }
+    }
+
+    &--theater {
+      background-image: url("../img/theater-tablet@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/theater-tablet@2x.jpg");
+      }
+    }
+  }
+
+  .projects__name {
+    line-height: 50px;
+
+    &--single {
+      font-size: 24px;
+      line-height: 50px;
+
+      & h3 {
+        margin: 23px 0 0 0;
+      }
+    }
+  }
+
+  .projects__description {
+    font-size: 18px;
+    line-height: 22px;
+
+    margin: 0;
+  }
+
+  .projects__link {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .projects__title {
+    font-size: 20px;
+    line-height: 1;
+
+    margin: 25px 0 17px;
+  }
+
+  .projects__item {
+    min-height: 100px;
+  }
+
+  .projects__content {
+    max-width: 100%;
+    padding: 6px 20px 0;
+  }
+
+  .projects__description {
+    display: none;
+  }
+
+  .projects__combination {
+    min-height: 100px;
+
+    &--future {
+      padding: 0;
+
+      background-image: url("../img/future-mobile@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/future-mobile@2x.jpg");
+      }
+
+      & h3 {
+        margin: 0;
+      }
+    }
+
+    &--halo {
+      padding: 0;
+
+      background-image: url("../img/halo-mobile@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/halo-mobile@2x.jpg");
+      }
+
+      & h3 {
+        margin: 0;
+      }
+    }
+
+    &--family {
+      padding: 0;
+
+      background-image: url("../img/family-mobile@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/family-mobile@2x.jpg");
+      }
+
+      & h3 {
+        margin: 0;
+      }
+    }
+
+    &--medial {
+      padding: 0;
+
+      background-image: url("../img/medial-mobile@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/medial-mobile@2x.jpg");
+      }
+
+      & h3 {
+        margin: 0;
+      }
+    }
+  }
+
+  .projects__single {
+    height: 100px;
+    padding: 0;
+
+    & h3 {
+      margin: 0;
+    }
+
+    &--energy {
+      background-image: url("../img/energy-mobile@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/energy-mobile@2x.jpg");
+      }
+    }
+
+    &--theater {
+      background-image: url("../img/theater-mobile@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/theater-mobile@2x.jpg");
+      }
+    }
+  }
+
+  .projects__name {
+    font-size: 16px;
+    line-height: 100px;
+    letter-spacing: 0.6px;
+
+    margin: 0;
+
+    text-align: center;
+
+    &--single {
+      font-size: 16px;
+      line-height: 100px;
+
+      & h3 {
+        margin: 0;
+      }
+    }
+  }
+}
