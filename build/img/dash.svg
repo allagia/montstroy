@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2" height="9" viewBox="0 0 2 9">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: #242424;
+        stroke-width: 1px;
+        fill-rule: evenodd;
+      }
+    </style>
+  </defs>
+  <path id="разделитель" class="cls-1" d="M1489,3149v8" transform="translate(-1487.5 -3148.5)"/>
+</svg>
