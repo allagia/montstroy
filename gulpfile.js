@@ -93,9 +93,17 @@ gulp.task("copy", function () {
   .pipe(gulp.dest("build"));
 });
 
+gulp.task('copy-swiper', function (done) {
+  gulp.src('node_modules/swiper/js/swiper.min.js')
+    .pipe(gulp.dest('build/js/swiper'));
+    gulp.src('node_modules/swiper/css/swiper.min.css')
+    .pipe(gulp.dest('build/css/swiper'));
+    done();
+});
+
 gulp.task("clean", function () {
   return del("build");
 });
 
-gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html"));
+gulp.task("build", gulp.series("clean", "copy", "css", "sprite", "html", "copy-swiper"));
 gulp.task("start", gulp.series("build", "server"));

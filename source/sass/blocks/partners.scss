@@ -33,7 +33,7 @@
   position: relative;
 
   max-width: 1250px;
-  padding: 75px 40px 0;
+  padding: 75px 40px 88px;
   margin: 0 auto;
 }
 
@@ -143,7 +143,7 @@
 
   .partners__content {
     max-width: 100%;
-    padding: 37px 20px 0;
+    padding: 37px 20px 67px;
   }
 
   .partners__buttons {
@@ -227,7 +227,7 @@
   }
 }
 
-@media (max-width: 676px) {
+@media (max-width: 767px) {
   .partners__title {
     font-size: 20px;
     margin: 25px 0 -3px 0;
@@ -239,7 +239,7 @@
 
   .partners__content {
     max-width: 100%;
-    padding: 1px 20px 0;
+    padding: 1px 20px 87px;
   }
 
   .partners__list {
