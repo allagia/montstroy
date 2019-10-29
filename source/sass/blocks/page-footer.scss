@@ -16,7 +16,9 @@
 }
 
 .map {
-  width: 100%;
+  & iframe {
+    width: 100%;
+  }
 }
 
 .page-footer__nav {
@@ -73,6 +75,11 @@
 .form {
   padding: 24px 73px 0 73px;
 
+  & form {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__title {
     font-family: "Raleway", "Arial", sans-serif;
     font-weight: 900;
@@ -118,11 +125,12 @@
   }
 
   &__second-row {
-    margin: 10px 0 33px 0;
+    margin: 10px 0 20px;
   }
 
   &__confidentiality {
-    margin: 26px 0 34px 0;
+    margin: 13px 0 34px;
+
     text-align: center;
     opacity: 0.5;
 
@@ -147,11 +155,11 @@
 
     width: 230px;
     min-height: 60px;
-    margin: 0 24%;
 
     background-color: #000000;
     color: #ffffff;
     border: none;
+    align-self: center;
   }
 }
 
@@ -322,17 +330,17 @@
     }
 
     &__second-row {
-      margin: 15px 0 27px;
+      margin: 13px 0 16px;
     }
 
     &__confidentiality {
       font-size: 10px;
       line-height: 13px;
 
-      margin: 14px 31px 26px 0;
+      margin: 0 31px 26px 0;
 
       & a {
-        width: 220px;
+        width: 158px;
         margin: 0 auto;
         padding: 1px 0 0 0;
       }
@@ -344,10 +352,9 @@
 
       width: 165px;
       min-height: 44px;
-      margin: 0 21%;
+      margin: 0 33px 0 0;
     }
   }
-
 
   .page-footer__content {
     max-width: 100%;
@@ -366,6 +373,7 @@
     align-self: center;
 
     margin: 0 0 -84px 0;
+    // margin: 0 0 0 0;
 
     & ul {
       @include list-reset;
@@ -409,7 +417,13 @@
   }
 
   .page-footer__contacts {
-    margin: 0 0 87px auto;
+    // margin: 0 0 87px auto;
+    display: none;
+
+    &--additional {
+      display: block;
+      margin: 0 0 87px auto;
+    }
   }
 
   .contacts {
@@ -478,7 +492,7 @@
   }
 
   .page-footer__content {
-    padding: 9px 0px 10px;
+    padding: 9px 0 0;
   }
 
   .page-footer__title {
@@ -496,12 +510,15 @@
   }
 
   .form {
-    top:377px;
-    left: 0;
+    position: static;
 
     width: 100%;
     height: 459px;
     padding: 19px 20px 0 20px;
+
+    & input {
+      width: 100%;
+    }
 
     &__title {
       margin: 20px 0 5px 0;
@@ -527,21 +544,22 @@
     }
 
     &__second-row {
-      margin: 11px 0 31px;
+      margin: 11px 0 18px;
     }
 
     &__confidentiality {
-      margin: 23px 0 29px 0;
+      margin: 11px 0 29px;
+    }
 
-      & a {
-        width: 157px;
-      }
+    &__button {
+      margin: 0;
     }
   }
 
   .contacts {
-    margin: 0 0 39px 0;
-    padding: 0 0 0 49px;
+    display: block;
+    margin: 0;
+    padding: 1px 0 29px 49px;
 
     line-height: 1.5;
 
@@ -571,7 +589,8 @@
     &--additional {
       display: block;
 
-      margin: 0 0 680px 95px;
+      padding: 0 0 0 38px;
+      margin: 0 auto 23px auto;
     }
   }
 
@@ -581,7 +600,7 @@
     align-self: flex-start;
 
     width: 100%;
-    margin: -442px 0 242px 0;
+    margin: 0 0 -3px 0;
     background-color: #1a1a1a;
 
     & ul {
@@ -616,6 +635,8 @@
 
   .social {
     width: 100%;
+    padding: 0 0 40px 19px;
+
     background-color: #1a1a1a;
   }
 
@@ -637,10 +658,26 @@
   }
 
   .social__list {
-    margin: -9px 0 0 20px;
+    margin: 0;
   }
 
   .social__item {
     margin: 0 33px 0 0;
+  }
+
+  .page-footer__top {
+    margin: 0;
+  }
+
+  .page-footer__bottom {
+    line-height: 15px;
+
+    padding: 13px 63px 12px 61px;
+
+    opacity: 0.33;
+
+    & p {
+      margin: 0;
+    }
   }
 }
