@@ -2,8 +2,10 @@
   background-color: #000000;
   color: rgb(255, 255, 254);
   background-image: linear-gradient(90deg, rgba(5, 5, 5, 0) 0%, rgba(5, 5, 5, 0) 100%), url("../img/background-desktop@1x.png");
-  background-position-y: -100px;
+  // background-position-y: -100px;
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0 bottom;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: linear-gradient(90deg, rgba(5, 5, 5, 0) 0%, rgba(5, 5, 5, 0) 100%), url("../img/background-desktop@2x.png");
@@ -144,7 +146,7 @@
     height: 466px;
 
     background-image: linear-gradient(90deg, rgba(5, 5, 5, 0) 0%, rgba(5, 5, 5, 0) 100%), url("../img/background-mobile@1x.png");
-    background-position: 0 -49px;
+    background-position: 0 bottom;
 
     @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
       background-image: linear-gradient(90deg, rgba(5, 5, 5, 0) 0%, rgba(5, 5, 5, 0) 100%), url("../img/background-mobile@2x.png");
@@ -196,6 +198,8 @@
     &__bottom {
       display: flex;
       flex-direction: column-reverse;
+
+      min-height: 350px;
     }
 
     &__buttons {
