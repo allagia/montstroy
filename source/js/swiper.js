@@ -25,6 +25,7 @@ var swiper = new Swiper('.swiper-container', {
   initialSlide: 2,
   freeMode: true,
   centeredSlides: true,
+  grabCursor: true,
   // centeredSlidesBounds: true,
   pagination: {
     el: '.swiper-pagination',

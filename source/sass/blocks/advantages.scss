@@ -1,3 +1,8 @@
+.swiper-container {
+  width: 1184px;
+  height: 134px;
+}
+
 .advantages {
   background-color: transparent;
   margin: -213px 0 0;
@@ -77,6 +82,10 @@
           opacity: 0.7;
         }
       }
+    }
+
+    &__bullets {
+      display: none;
     }
   }
 }
@@ -259,5 +268,10 @@
         height: 8px;
       }
     }
+  }
+
+  .swiper-container {
+    width: 280px;
+    height: 220px;
   }
 }
