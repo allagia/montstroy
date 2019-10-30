@@ -43,20 +43,20 @@
     & a {
       color: rgba(48, 48, 48, 0.769);
     }
+
+    &--small {
+      margin: -542px 0 0 0;
+    }
   }
 
   &__item {
     width: 29.5%;
     min-height: 499px;
-    margin: 0 45px 44px 0;
+    margin: 0 3.65% 44px 0;
     padding: 35px 41px 0;
 
     background-color: rgb(255, 255, 255);
     box-shadow: 0 5px 9px 1px rgba(0, 0, 0, 0.05);
-
-    &:nth-child(3n) {
-      margin: 0 0 44px 0;
-    }
   }
 }
 
@@ -84,6 +84,10 @@
   & svg {
     display: none;
   }
+
+  &--first {
+    margin: 0 3.65% 44px 33%;
+  }
 }
 
 
@@ -91,8 +95,7 @@
   .service {
     &__content {
       width: 100%;
-      // max-width: 768px;
-      padding: 17px 22px 0 22px;
+      padding: 17px 22px 2px;
       margin: 0 auto;
     }
 
@@ -110,22 +113,35 @@
     }
 
     &__list {
-      flex-direction: column;
-      max-width: 724px;
-      max-height: 340px;
       margin: 22px 0 0 0;
       overflow: overlay;
+
+      & div {
+        width: 48.5%;
+      }
+
+      &--small {
+        margin: 0;
+      }
     }
 
     &__item {
-      // width: 352px;
-      width: 48.5%;
+      width: 100%;
       min-height: 50px;
       height: auto;
-      margin: 0 20px 10px 0;
+      margin: 0 0 10px 0;
       padding: 0;
 
       box-shadow: none;
+
+      &--big {
+        width: 48.5%;
+        margin: 0 20px 0 0;
+
+        &:last-child {
+          margin: 0;
+        }
+      }
 
       &:nth-child(3n) {
         margin: 0 auto 10px 0;
@@ -145,10 +161,9 @@
       font-size: 14px;
       line-height: 1.4;
 
-      // width: 350px;
       width: 100%;
       height: 50px;
-      padding: 15px 4px 0 20px;
+      padding: 18px 4px 0 22px;
       margin: 0;
 
       text-align: left;
@@ -157,7 +172,7 @@
       cursor: pointer;
 
       &--long {
-        padding: 10px 8px 0 20px;
+        padding: 9px 8px 0 22px;
       }
 
       & svg {
@@ -237,18 +252,29 @@
     &__list {
       max-height: 100%;
       margin: 22px 0 0 0;
+
+      &--small {
+        margin: 0;
+      }
     }
 
     &__item {
       width: 100%;
+
+      &--big {
+        width: 100%;
+        margin: 0 0 10px 0;
+      }
+    }
+
+    & input:checked ~ ul {
+      margin: 0 0 -10px 0;
     }
   }
 
   .subservice {
     &:first-child {
       letter-spacing: 1px;
-
-      margin: 0;
     }
 
     &__title {
