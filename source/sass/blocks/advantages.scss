@@ -1,7 +1,7 @@
-// .swiper-container {
-//   width: 1184px;
-//   height: 134px;
-// }
+.swiper-container {
+  width: 100%;
+  height: 134px;
+}
 
 .advantages {
   background-color: transparent;
@@ -93,6 +93,22 @@
     }
   }
 }
+
+// .advantages .advantages__item {
+//   margin: 0 auto 0 0;
+// }
+
+// .advantages .advantages__item--like {
+//   width: 22%;
+// }
+
+// .advantages .advantages__item--handshake {
+//   width: 16%;
+// }
+
+// .advantages .advantages__item--settings {
+//   width: 23.5%;
+// }
 
 @media (max-width: 1023px) {
   .advantages {
@@ -206,8 +222,8 @@
 
       width: 40px;
       height: 10px;
-      margin: 0 auto;
-      padding: 0 0 0 6px;
+      margin: 0 0 -25px 50%;
+      padding: 0 0 0 3px;
     }
   }
 
@@ -232,10 +248,14 @@
     }
   }
 
-  // .swiper-container {
-  //   // width: 718px;
-  //   width: 720px;
-  //   height: 254px;
+  .swiper-container {
+    width: 720px;
+    height: 203px;
+    overflow: visible;
+  }
+
+  // .advantages .advantages__item--like {
+  //   width: 229px;
   // }
 }
 
@@ -243,28 +263,38 @@
   .advantages {
     &__list {
       max-width: 100%;
-      padding: 170px 20px 0;
+      padding: 0;
+      margin: 199px auto 8px;
     }
 
     &__item {
       font-size: 14px;
       line-height: 20px;
 
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      align-items: center;
+
       padding: 0;
 
       box-shadow: none;
       border: 1px solid rgb(221, 221, 221);
 
-      &--like {
-        display: none;
-      }
-
-      &--handshake {
+      &--handshake,
+      &--like,
+      &--settings {
         font-size: 14px;
         line-height: 20px;
 
-        width: 100%;
-        padding: 42px 59px 0;
+        width: 280px;
+        // padding: 42px 59px 0;
+        // min-width: 280px;
+        // max-width: 450px;
+        height: 163px;
+        margin: 20px 0;
+        padding: 36px 20px 0;
+        z-index: 1;
 
         & p {
           margin: 10px 0 0;
@@ -274,16 +304,13 @@
           margin: 0;
         }
       }
-
-      &--settings {
-        display: none;
-      }
     }
 
     &__bullets {
       align-items: center;
 
-      padding: 0 0 0 5px;
+      padding: 0;
+      margin: 0 0 -25px 42.5%;
     }
   }
 
@@ -299,8 +326,21 @@
     }
   }
 
-  // .swiper-container {
-  //   width: 280px;
-  //   height: 220px;
-  // }
+  .swiper-container {
+    width: 100%;
+    height: 220px;
+  }
+
+  .advantages .advantages__item--like,
+  .advantages .advantages__item--handshake,
+  .advantages .advantages__item--settings {
+    width: 280px;
+    height: 156px;
+    padding: 42px 0 0;
+    margin: 40px 17px 20px 9px;
+
+    & p {
+      margin: 14px 0 0;
+    }
+  }
 }

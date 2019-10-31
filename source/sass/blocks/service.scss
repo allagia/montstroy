@@ -37,7 +37,7 @@
     flex-wrap: wrap;
 
     @include list-reset;
-
+    width: 100%;
     margin: 18px 0 0 0;
 
     & a {
@@ -101,7 +101,7 @@
   .service {
     &__content {
       width: 100%;
-      padding: 17px 22px 2px;
+      padding: 32px 22px 2px;
       margin: 0 auto;
     }
 
@@ -120,7 +120,6 @@
 
     &__list {
       margin: 22px 0 0 0;
-      overflow: overlay;
 
       & div {
         width: 48.5%;
@@ -223,7 +222,9 @@
 
       &:hover {
         border: 1px solid rgb(0, 255, 215);
-        box-shadow: 0 2px 6.3px 0.7px rgba(0, 255, 216, 0.65);
+        // box-shadow: 0 2px 6.3px 0.7px rgba(0, 255, 216, 0.65);
+        box-shadow: 0 0 6.3px 0 rgba(0, 255, 216, 0.65);
+        z-index: 1;
       }
 
       & span {
@@ -233,11 +234,18 @@
 
     &__link {
       display: block;
-      height: 100%;
-      padding: 16px 4px 0 21px;
+      box-sizing: border-box;
+      min-height: 48px;
+      padding: 14px 4px 0 21px;
+
+      // &:hover {
+      //   border: 1px solid rgb(0, 255, 215);
+      //   box-shadow: 0 2px 6.3px 0.7px rgba(0, 255, 216, 0.65);
+      //   z-index: 1;
+      // }
 
       &--long {
-        padding: 4px 8px 0 21px;
+        padding: 0 8px 0 21px;
       }
     }
   }
@@ -247,7 +255,7 @@
   .service {
     &__content {
       max-width: 100%;
-      padding: 18px 0 16px;
+      padding: 34px 0 16px;
     }
 
     &__title {
@@ -321,10 +329,11 @@
     }
 
     &__link {
-      padding: 17px 4px 0 21px;
+      min-height: 41px;
+      // padding: 17px 4px 0 21px;
 
       &--long {
-        padding: 4px 21px 0 21px;
+        // padding: 4px 21px 0 21px;
       }
     }
   }

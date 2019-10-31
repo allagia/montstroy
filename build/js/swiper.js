@@ -1,151 +1,105 @@
 'use strict';
 
-// var swiper = new Swiper ('.swiper-container', {
-//   slidesPerView: 3,
-//   // spaceBetween: 30,
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true,
-//   },
-// });
+var tabletScreen = window.matchMedia('(max-width: 1023px)');
+var phoneScreen = window.matchMedia('(max-width: 767px)');
+var swiper;
+var currentScreenSize = '';
+var swiperNode = document.querySelector('.swiper-container');
 
-// var swiper = new Swiper('.swiper-container', {
-//   slidesPerView: 1,
-//   spaceBetween: -10,
-//   // freeMode: true,
-//   pagination: {
-//     el: '.swiper-pagination',
-//     clickable: true,
-//   },
-// });
-
-var mySwiper = new Swiper('.swiper-container', {
-  // slidesPerView: 3,
-  // initialSlide: 2,
-  centeredSlides: true,
-  // grabCursor: true,
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'bullets',
-    clickable: true,
-  },
-  breakpoints: {
-    320: {
-      slidesPerView: 1,
-      spaceBetween: 0
-    },
-    768: {
-      slidesPerView: 3,
-      initialSlide: 2,
-      spaceBetween: -10,
-    },
-    1024: {
-      slidesPerView: 3,
-      initialSlide: 1,
-      spaceBetween: 250,
-      slidesOffsetAfter: 40
-      // mySwiper.destroy(false, false),
+function breakpointChecker() {
+  if (tabletScreen.matches) {
+    if (currentScreenSize !== 'tablet') {
+      currentScreenSize = 'tablet';
+      disableSwiper();
     }
+    enableSwiper();
+  } else if (phoneScreen.matches) {
+    if (currentScreenSize !== 'phone') {
+      currentScreenSize = 'phone';
+      disableSwiper();
+    }
+    enableSwiper();
+  } else {
+    disableSwiper();
   }
-});
+  return;
+}
 
-var mySwiper = document.querySelector('.swiper-container').swiper;
+function enableSwiper() {
+  addSwiperClasses(swiperNode);
+  swiper = new window.Swiper(swiperNode, {
+    slidesPerView: 'auto',
+    initialSlide: 1,
+    centeredSlides: true,
+    grabCursor: true,
+    pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    }
+  });
+}
 
-// var slide = document.querySelector('.advanatges__item');
+function disableSwiper() {
+  if (swiper) {
+    swiper.destroy(true, true);
+    swiper = null;
+  }
 
-// slide.style.removeProperty('width');
+  removeSwiperClasses(swiperNode);
+}
 
-// 'use strict';
+function removeSwiperClasses(swiperContainerNode) {
+  swiperContainerNode.swiperClasses = [];
 
-// var breakpoint = window.matchMedia('(max-width: 767px)');
-// var swiper;
-// var swiperNode = document.querySelector('.swiper-container-top');
+  Array.from(swiperContainerNode.classList).forEach(function (className) {
+    if (className.startsWith('swiper-')) {
+      swiperContainerNode.swiperClasses.push(className);
+    }
+  });
 
-// function breakpointChecker() {
-//   if (breakpoint.matches) {
-//     enableSwiper();
+  swiperContainerNode.swiperClasses.forEach(function (className) {
+    swiperContainerNode.classList.remove(className);
+  });
 
-//     return;
-//   }
+  var nodes = Array.from(swiperNode.querySelectorAll('.swiper-wrapper, .swiper-slide, .swiper-pagination'));
+  nodes.forEach(function (node) {
+    node.swiperClasses = [];
 
-//   disableSwiper();
-// }
+    Array.from(node.classList).forEach(function (className) {
+      if (className.startsWith('swiper-')) {
+        node.swiperClasses.push(className);
+      }
+    });
 
-// function enableSwiper() {
-//   addSwiperClasses(swiperNode);
-//   swiper = new window.Swiper(swiperNode, {
-//     slidesPerView: 'auto',
-//     spaceBetween: 10,
-//     initialSlide: 1,
-//     centeredSlides: true,
-//     grabCursor: true,
-//     pagination: {
-//       el: '.swiper-pagination',
-//       clickable: true,
-//     }
-//   });
-// }
+    node.swiperClasses.forEach(function (className) {
+      node.classList.remove(className);
+    });
 
-// function disableSwiper() {
-//   if (swiper) {
-//     swiper.destroy(true, true);
-//     swiper = null;
-//   }
+    node.classList.add('swiper-disabled');
+  });
+}
 
-//   removeSwiperClasses(swiperNode);
-// }
+function addSwiperClasses(swiperContainerNode) {
+  (swiperContainerNode.swiperClasses || []).forEach(function (className) {
+    swiperContainerNode.classList.add(className);
+  });
 
-// function removeSwiperClasses(swiperContainerNode) {
-//   swiperContainerNode.swiperClasses = [];
+  swiperContainerNode.swiperClasses = [];
 
-//   Array.from(swiperContainerNode.classList).forEach(function (className) {
-//     if (className.startsWith('swiper-')) {
-//       swiperContainerNode.swiperClasses.push(className);
-//     }
-//   });
+  var nodes = Array.from(swiperContainerNode.querySelectorAll('.swiper-disabled'));
 
-//   swiperContainerNode.swiperClasses.forEach(function (className) {
-//     swiperContainerNode.classList.remove(className);
-//   });
+  nodes.forEach(function (node) {
+    node.classList.remove('swiper-disabled');
 
-//   var nodes = Array.from(swiperNode.querySelectorAll('.swiper-wrapper, .swiper-slide, .swiper-pagination'));
-//   nodes.forEach(function (node) {
-//     node.swiperClasses = [];
+    (node.swiperClasses || []).forEach(function (className) {
+      node.classList.add(className);
+    });
 
-//     Array.from(node.classList).forEach(function (className) {
-//       if (className.startsWith('swiper-')) {
-//         node.swiperClasses.push(className);
-//       }
-//     });
-
-//     node.swiperClasses.forEach(function (className) {
-//       node.classList.remove(className);
-//     });
-
-//     node.classList.add('swiper-disabled');
-//   });
-// }
-
-// function addSwiperClasses(swiperContainerNode) {
-//   (swiperContainerNode.swiperClasses || []).forEach(function (className) {
-//     swiperContainerNode.classList.add(className);
-//   });
-
-//   swiperContainerNode.swiperClasses = [];
-
-//   var nodes = Array.from(swiperContainerNode.querySelectorAll('.swiper-disabled'));
-
-//   nodes.forEach(function (node) {
-//     node.classList.remove('swiper-disabled');
-
-//     (node.swiperClasses || []).forEach(function (className) {
-//       node.classList.add(className);
-//     });
-
-//     node.swiperClasses = [];
-//   });
-// }
+    node.swiperClasses = [];
+  });
+}
 
 
-// breakpoint.addListener(breakpointChecker);
-// breakpointChecker();
+tabletScreen.addListener(breakpointChecker);
+phoneScreen.addListener(breakpointChecker);
+breakpointChecker();
