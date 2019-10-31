@@ -1,7 +1,7 @@
-.swiper-container {
-  width: 1184px;
-  height: 134px;
-}
+// .swiper-container {
+//   width: 1184px;
+//   height: 134px;
+// }
 
 .advantages {
   background-color: transparent;
@@ -14,6 +14,7 @@
 
     max-width: 1256px;
     padding: 0 35px;
+    padding: 0;
     margin: 0 auto;
   }
 
@@ -27,12 +28,13 @@
     color: rgba(255, 255, 255, 0.6);
 
     &--like {
-      width: 17%;
-      padding: 5px 0 0 5px;
+      width: 22%;
+      padding: 5px 0 0 0;
 
       & p {
         margin: 22px 0 0 0;
-        min-width: 195px;
+        width: 253px;
+        padding: 0 0 0 25px;
       }
 
       & svg {
@@ -47,11 +49,12 @@
 
     &--handshake {
       width: 16%;
-      padding: 21px 0 0 18px;
+      padding: 21px 0 0 0;
 
       & p {
         margin: 21px 0 0 0;
-        min-width: 174px;
+        width: 190px;
+        padding: 0 0 0 16px;
       }
 
       & svg {
@@ -65,13 +68,14 @@
     }
 
     &--settings {
-      width: 20%;
-      padding: 0 0 0 6px;
+      width: 23.5%;
+      padding: 0;
       margin: 0;
 
       & p {
         margin: 22px 0 0 0;
-        min-width: 233px;
+        width: 271px;
+        padding: 0 0 0 20px;
       }
 
       & svg {
@@ -96,14 +100,21 @@
 
     &__list {
       position: relative;
+      align-items: center;
 
+      width: 100%;
       max-width: 774px;
-      padding: 47px 25px 7px;
+      margin: 47px auto 8px;
+      padding: 0 25px;
     }
 
     &__item {
       font-size: 12px;
       line-height: 16px;
+
+      height: 163px;
+      margin: 0;
+      padding: 0;
 
       color: #000000;
 
@@ -113,16 +124,18 @@
       &--like {
         width: 29%;
         min-width: 229px;
-        height: 163px;
-        padding: 24px 20px 0 20px;
-        margin: 20px -10px 0 0;
+        margin: 0 -10px 0 0;
 
         & p {
-          margin: 3px 0 0 0;
+          width: 202px;
+          margin: 3px auto 0;
+          padding: 0;
+
           opacity: 0.7;
         }
 
         & svg {
+          margin: 26px 0 0 0;
           .cls-1 {
             fill: #000000;
             opacity: 0.3;
@@ -134,21 +147,23 @@
         font-size: 14px;
         line-height: 20px;
 
+
         width: 22%;
-        min-width: 280px;
         height: 200px;
-        padding: 49px 59px 0;
+        padding: 0;
 
         z-index: 1;
 
         & p {
-          min-width: 160px;
-          margin: 5px 0 0 0;
+          width: 160px;
+          margin: 5px auto 0;
+          padding: 0;
         }
 
         & svg {
           width: 89px;
           height: 59px;
+          margin: 50px 0 0 0;
 
           .cls-1 {
             fill: #000000;
@@ -160,22 +175,29 @@
       &--settings {
         width: 29%;
         min-width: 229px;
-        height: 163px;
-        padding: 20px 23px 0 22px;
-        margin: 19px 0 0 -10px;
+        margin: 0 0 0 -10px;
 
         & p {
-          min-width: 183px;
-          margin: 3px 0 0 0;
+          width: 183px;
+          margin: 3px auto 0;
+          padding: 0;
+
           opacity: 0.7;
         }
 
         & svg {
+          margin: 22px auto 0;
+          s
           .cls-1 {
             fill: #000000;
             opacity: 0.3;
           }
         }
+      }
+
+      &--active {
+        min-width: 280px;
+        height: 200px;
       }
     }
 
@@ -210,22 +232,25 @@
     }
   }
 
-  .swiper-container {
-    width: 774px;
-    height: 254px;
-  }
+  // .swiper-container {
+  //   // width: 718px;
+  //   width: 720px;
+  //   height: 254px;
+  // }
 }
 
 @media (max-width: 767px) {
   .advantages {
     &__list {
       max-width: 100%;
-      padding: 219px 20px 5px;
+      padding: 170px 20px 0;
     }
 
     &__item {
       font-size: 14px;
       line-height: 20px;
+
+      padding: 0;
 
       box-shadow: none;
       border: 1px solid rgb(221, 221, 221);
@@ -243,6 +268,10 @@
 
         & p {
           margin: 10px 0 0;
+        }
+
+        & svg {
+          margin: 0;
         }
       }
 
@@ -270,8 +299,8 @@
     }
   }
 
-  .swiper-container {
-    width: 280px;
-    height: 220px;
-  }
+  // .swiper-container {
+  //   width: 280px;
+  //   height: 220px;
+  // }
 }

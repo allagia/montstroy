@@ -19,16 +19,14 @@
 //   },
 // });
 
-var swiper = new Swiper('.swiper-container', {
+var mySwiper = new Swiper('.swiper-container', {
   // slidesPerView: 3,
-  // spaceBetween: -10,
-  initialSlide: 1,
-  freeMode: true,
+  // initialSlide: 2,
   centeredSlides: true,
-  grabCursor: true,
-  // centeredSlidesBounds: true,
+  // grabCursor: true,
   pagination: {
     el: '.swiper-pagination',
+    type: 'bullets',
     clickable: true,
   },
   breakpoints: {
@@ -38,11 +36,15 @@ var swiper = new Swiper('.swiper-container', {
     },
     768: {
       slidesPerView: 3,
-      spaceBetween: 0
+      initialSlide: 2,
+      spaceBetween: -10,
     },
     1024: {
       slidesPerView: 3,
-      spaceBetween: 194
+      initialSlide: 1,
+      spaceBetween: 250,
+      slidesOffsetAfter: 40
+      // mySwiper.destroy(false, false),
     }
   }
 });

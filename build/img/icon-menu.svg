@@ -6,8 +6,8 @@
       }
 
       .cls-2, .cls-3 {
-        fill: #fff;
-        stroke: #fff;
+        fill: #000000;
+        stroke: #000000;
         stroke-linecap: round;
         stroke-width: 2px;
         fill-rule: evenodd;
@@ -32,9 +32,9 @@
   <g id="Меню" class="cls-1">
     <path id="бургер1" class="cls-2" d="M189,17h24" transform="translate(-187 -16)"/>
     <path id="бургер2" class="cls-2" d="M189,27h24" transform="translate(-187 -16)"/>
-    <g transform="translate(-187 -16)" style="fill: #fff; filter: url(#filter-2)">
+    <g transform="translate(-187 -16)" style="fill: #000000; filter: url(#filter-2)">
       <path id="бургер3" class="cls-3" d="M189,36h24" style="stroke: inherit; filter: none; fill: inherit"/>
     </g>
-    <use transform="translate(-187 -16)" xlink:href="#бургер3" style="stroke: #fff; filter: none; fill: none"/>
+    <use transform="translate(-187 -16)" xlink:href="#бургер3" style="stroke: #000000; filter: none; fill: none"/>
   </g>
 </svg>

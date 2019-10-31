@@ -57,6 +57,12 @@
 
     background-color: rgb(255, 255, 255);
     box-shadow: 0 5px 9px 1px rgba(0, 0, 0, 0.05);
+
+    &--big {
+      &:last-child {
+        width: 100%;
+      }
+    }
   }
 }
 
@@ -139,6 +145,7 @@
         margin: 0 20px 0 0;
 
         &:last-child {
+          width: 48.5%;
           margin: 0;
         }
       }
@@ -240,7 +247,7 @@
   .service {
     &__content {
       max-width: 100%;
-      padding: 19px 0 16px;
+      padding: 18px 0 16px;
     }
 
     &__title {
@@ -264,6 +271,10 @@
       &--big {
         width: 100%;
         margin: 0 0 10px 0;
+
+        &:last-child {
+          width: 100%;
+        }
       }
     }
 
