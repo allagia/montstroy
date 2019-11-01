@@ -13,7 +13,6 @@
     @include list-reset;
 
     max-width: 1256px;
-    padding: 0 35px;
     padding: 0;
     margin: 0 auto;
   }
@@ -152,6 +151,7 @@
 
         & svg {
           margin: 26px 0 0 0;
+
           .cls-1 {
             fill: #000000;
             opacity: 0.3;
@@ -203,7 +203,7 @@
 
         & svg {
           margin: 22px auto 0;
-          s
+
           .cls-1 {
             fill: #000000;
             opacity: 0.3;
@@ -222,8 +222,8 @@
 
       width: 40px;
       height: 10px;
-      margin: 0 0 -25px 50%;
-      padding: 0 0 0 3px;
+      margin: 0 0 -25px 48%;
+      padding: 0 0 0 1px;
     }
   }
 
@@ -281,37 +281,50 @@
       box-shadow: none;
       border: 1px solid rgb(221, 221, 221);
 
-      &--handshake,
       &--like,
       &--settings {
-        font-size: 14px;
-        line-height: 20px;
-
-        width: 280px;
-        // padding: 42px 59px 0;
-        // min-width: 280px;
-        // max-width: 450px;
-        height: 163px;
-        margin: 20px 0;
-        padding: 36px 20px 0;
-        z-index: 1;
-
-        & p {
-          margin: 10px 0 0;
-        }
-
-        & svg {
-          margin: 0;
-        }
+        display: none;
       }
+
+  //   &--handshake,
+  //   &--like,
+  //   &--settings {
+  //     font-size: 14px;
+  //     line-height: 20px;
+
+  //     width: 280px;
+  //     // padding: 42px 59px 0;
+  //     // min-width: 280px;
+  //     // max-width: 450px;
+  //     height: 163px;
+  //     margin: 20px 0;
+  //     padding: 36px 20px 0;
+  //     z-index: 1;
+
+  //     & p {
+  //       margin: 10px 0 0;
+  //     }
+
+  //     & svg {
+  //       margin: 0;
+  //     }
+  //   }
+  // }
+
+      // &__bullets {
+      //   align-items: center;
+
+      //   padding: 0;
+      //   margin: 0 0 -25px 42.5%;
+      // }
     }
 
-    &__bullets {
-      align-items: center;
+  /*без слайдера*/
+  &__bullets {
+    align-items: center;
 
-      padding: 0;
-      margin: 0 0 -25px 42.5%;
-    }
+    padding: 0;
+    margin: 0 0 -25px 45%;
   }
 
   .pagination {
@@ -319,28 +332,45 @@
       width: 6px;
       height: 6px;
 
-      &--active {
-        width: 8px;
-        height: 8px;
+        &--active {
+          width: 8px;
+          height: 8px;
+        }
       }
     }
-  }
 
   .swiper-container {
     width: 100%;
     height: 220px;
+    }
   }
 
-  .advantages .advantages__item--like,
-  .advantages .advantages__item--handshake,
-  .advantages .advantages__item--settings {
-    width: 280px;
-    height: 156px;
-    padding: 42px 0 0;
-    margin: 40px 17px 20px 9px;
+  // .advantages .advantages__item--like,
+  // .advantages .advantages__item--handshake,
+  // .advantages .advantages__item--settings {
+  //   width: 280px;
+  //   height: 156px;
+  //   padding: 42px 0 0;
+  //   margin: 40px 17px 20px 9px;
+
+  //   & p {
+  //     margin: 14px 0 0;
+  //   }
+  // }
+
+  /*без слайдера*/
+  .advantages .advantages__item--handshake {
+    width: 80%;
+    height: 198px;
+    padding: 0;
+    margin: 20px auto 0 auto;
 
     & p {
       margin: 14px 0 0;
+    }
+
+    & svg {
+      margin: 42px 0 0 0;
     }
   }
 }

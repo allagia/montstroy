@@ -35,6 +35,7 @@
   &__list {
     display: flex;
     flex-wrap: wrap;
+    align-items: flex-start;
 
     @include list-reset;
     width: 100%;
@@ -50,15 +51,22 @@
   }
 
   &__item {
-    width: 29.5%;
+    width: 30%;
     min-height: 499px;
-    margin: 0 3.65% 44px 0;
-    padding: 35px 41px 0;
+    margin: 0 auto 43px 0;
 
     background-color: rgb(255, 255, 255);
     box-shadow: 0 5px 9px 1px rgba(0, 0, 0, 0.05);
 
+    &--first {
+      z-index: 1;
+    }
+
     &--big {
+      padding: 0;
+
+      box-shadow: none;
+
       &:last-child {
         width: 100%;
       }
@@ -67,6 +75,8 @@
 }
 
 .subservice {
+  padding: 35px 41px 0;
+
   &__list {
     @include list-reset;
     padding: 25px 0 0 2px;
@@ -92,7 +102,19 @@
   }
 
   &--first {
-    margin: 0 3.65% 44px 33%;
+    margin: 0 auto 43px 33.5%;
+  }
+
+  &__link {
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 
@@ -101,7 +123,7 @@
   .service {
     &__content {
       width: 100%;
-      padding: 32px 22px 2px;
+      padding: 42px 22px 0;
       margin: 0 auto;
     }
 
@@ -139,6 +161,11 @@
 
       box-shadow: none;
 
+      &--first {
+        width: 48.5%;
+        margin: 0 20px 10px 0;
+      }
+
       &--big {
         width: 48.5%;
         margin: 0 20px 0 0;
@@ -175,6 +202,7 @@
       text-align: left;
       color: rgb(49, 49, 49);
       background-color: rgb(244, 244, 244);
+      border: 1px solid transparent;
       cursor: pointer;
 
       &--long {
@@ -187,6 +215,11 @@
         top: 24px;
         right: 22px;
         opacity: 0.3;
+      }
+
+      &:hover {
+        border: 1px solid rgb(0, 255, 215);
+        box-shadow: 0 2px 6.3px 0.7px rgba(0, 255, 216, 0.65);
       }
     }
 
@@ -224,9 +257,7 @@
       &:hover {
         border: 1px solid rgb(0, 255, 215);
         box-shadow: 0 2px 6.3px 0.7px rgba(0, 255, 216, 0.65);
-        // box-shadow: 0 0 6.3px 0 rgba(0, 255, 216, 0.65);
         z-index: 1;
-        overflow: visible;
       }
 
       & span {
@@ -237,18 +268,16 @@
     &__link {
       display: block;
       box-sizing: border-box;
-      min-height: 48px;
+      height: 100%;
       padding: 14px 4px 0 21px;
-      // overflow: visible;
-
-      // &:hover {
-      //   border: 1px solid rgb(0, 255, 215);
-      //   box-shadow: 0 2px 6.3px 0.7px rgba(0, 255, 216, 0.65);
-      //   z-index: 1;
-      // }
 
       &--long {
         padding: 0 8px 0 21px;
+      }
+
+      &:hover,
+      &:active {
+        opacity: 1;
       }
     }
   }
@@ -258,7 +287,7 @@
   .service {
     &__content {
       max-width: 100%;
-      padding: 34px 0 16px;
+      padding: 43px 0 11px;
     }
 
     &__title {
@@ -279,6 +308,11 @@
     &__item {
       width: 100%;
 
+      &--first {
+        width: 100%;
+        margin: 0;
+      }
+
       &--big {
         width: 100%;
         margin: 0 0 10px 0;
@@ -290,7 +324,7 @@
     }
 
     & input:checked ~ ul {
-      margin: 0 0 -10px 0;
+      margin: 0 0 0 0;
     }
   }
 
@@ -316,7 +350,7 @@
       &:active,
       &:hover {
         border: 1px solid rgb(0, 255, 215);
-        box-shadow: 0px 2px 6.3px 0.7px rgba(0, 255, 216, 0.65);
+        box-shadow: 0 2px 6.3px 0.7px rgba(0, 255, 216, 0.65);
       }
     }
 
@@ -332,11 +366,10 @@
     }
 
     &__link {
-      min-height: 41px;
-      // padding: 17px 4px 0 21px;
+      padding: 15px 4px 0 21px;
 
       &--long {
-        // padding: 4px 21px 0 21px;
+        padding: 3px 21px 0 21px;
       }
     }
   }

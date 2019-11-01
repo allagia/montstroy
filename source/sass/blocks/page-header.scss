@@ -15,14 +15,19 @@
   line-height: 20px;
 
   &__logo {
-    width: 18%;
+    width: 17%;
     cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
 
-    width: 54%;
+    width: 32%;
 
     text-transform: uppercase;
 
@@ -59,7 +64,7 @@
     font-weight: bold;
     line-height: 1.111;
 
-    width: 16%;
+    width: 15.5%;
     min-width: 170px;
     margin: 20px 0 0 0;
 
@@ -81,7 +86,7 @@
     text-align: center;
 
     min-width: 191px;
-    width: 17%;
+    width: 16%;
     min-height: 45px;
     margin: 6px 0 0 0;
     padding: 3px 0 0 0;
@@ -123,6 +128,7 @@
     }
 
     &__list {
+      display: none;
       position: absolute;
       flex-direction: column;
       top: 42px;
@@ -133,14 +139,19 @@
 
       background-color: #e7e7e7;
 
-      &--closed {
-        display: none;
-      }
+      // &--closed {
+      //   display: none;
+      // }
 
-      &--opened {
-        display: flex;
+      // &--opened {
+      //   display: flex;
+      // }
+
+      &--active {
+        display: block;
       }
     }
+
 
     &__item {
       font-weight: bold;
@@ -181,6 +192,14 @@
       background-color: transparent;
       border: none;
       outline: none;
+
+      &:hover {
+        opacity: 0.7;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
     }
 
     &__phone {
