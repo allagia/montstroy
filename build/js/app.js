@@ -14,11 +14,11 @@ hamburger.addEventListener('click', function (e) {
 
 document.addEventListener('click', function (e) {
   var target = e.target;
-  var its_menu = target === menu || menu.contains(target);
-  var its_hamburger = target === hamburger;
-  var menu_is_active = menu.classList.contains('page-nav__list--active');
+  var itsMenu = target === menu || menu.contains(target);
+  var itsHamburger = target === hamburger;
+  var menuIsActive = menu.classList.contains('page-nav__list--active');
 
-  if (!its_menu && !its_hamburger && menu_is_active) {
+  if (!itsMenu && !itsHamburger && menuIsActive) {
     toggleMenu();
   }
 });
