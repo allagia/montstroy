@@ -2,50 +2,80 @@
 
 var tabletScreen = window.matchMedia('(max-width: 1023px)');
 var phoneScreen = window.matchMedia('(max-width: 767px)');
-var swiper;
-var currentScreenSize = '';
-var swiperNode = document.querySelector('.swiper-container');
+var swiperObjServices;
+var swiperObjPartners;
+var currentScreenSize = 'desktop';
+var swiperNodeServices = document.querySelector('.swiper-container-services');
+var swiperNodePartners = document.querySelector('.swiper-container-partners');
+var swiperParamsDefault = {
+  slidesPerView: 'auto',
+  initialSlide: 1,
+  centeredSlides: true,
+  grabCursor: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  }
+};
+var swiperParamsPartnersDesktop = {
+  slidesPerView: 'auto',
+  initialSlide: 1,
+  centeredSlides: true,
+  grabCursor: true,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev'
+  }
+};
 
 function breakpointChecker() {
   if (tabletScreen.matches) {
     if (currentScreenSize !== 'tablet') {
       currentScreenSize = 'tablet';
-      disableSwiper();
+      if (swiperObjServices) {
+        disableSwiper(swiperObjServices);
+      }
+      if (swiperObjPartners) {
+        disableSwiper(swiperObjPartners);
+      }
     }
-    enableSwiper();
+    swiperObjServices = enableSwiper(swiperNodeServices, swiperParamsDefault);
+    swiperObjPartners = enableSwiper(swiperNodePartners, swiperParamsDefault);
   } else if (phoneScreen.matches) {
     if (currentScreenSize !== 'phone') {
       currentScreenSize = 'phone';
-      disableSwiper();
+      if (swiperObjServices) {
+        disableSwiper(swiperObjServices);
+      }
+      if (swiperObjPartners) {
+        disableSwiper(swiperObjPartners);
+      }
     }
-    enableSwiper();
+    swiperObjServices = enableSwiper(swiperNodeServices, swiperParamsDefault);
+    swiperObjPartners = enableSwiper(swiperNodePartners, swiperParamsDefault);
   } else {
-    disableSwiper();
+    if (currentScreenSize !== 'desktop') {
+      currentScreenSize = 'desktop';
+      if (swiperObjServices) {
+        disableSwiper(swiperObjServices);
+      }
+      if (swiperObjPartners) {
+        disableSwiper(swiperObjPartners);
+      }
+    }
+    swiperObjPartners = enableSwiper(swiperNodePartners, swiperParamsPartnersDesktop);
   }
   return;
 }
 
-function enableSwiper() {
+function enableSwiper(swiperNode, swipersParams) {
   addSwiperClasses(swiperNode);
-  swiper = new window.Swiper(swiperNode, {
-    slidesPerView: 'auto',
-    initialSlide: 1,
-    centeredSlides: true,
-    grabCursor: true,
-    pagination: {
-      el: '.swiper-pagination',
-      clickable: true,
-    }
-  });
+  return new window.Swiper(swiperNode, swipersParams);
 }
 
-function disableSwiper() {
-  if (swiper) {
-    swiper.destroy(true, true);
-    swiper = null;
-  }
-
-  removeSwiperClasses(swiperNode);
+function disableSwiper(swiperObj) {
+  removeSwiperClasses(swiperObj.el);
+  swiperObj.destroy(true, true);
 }
 
 function removeSwiperClasses(swiperContainerNode) {
@@ -61,7 +91,7 @@ function removeSwiperClasses(swiperContainerNode) {
     swiperContainerNode.classList.remove(className);
   });
 
-  var nodes = Array.from(swiperNode.querySelectorAll('.swiper-wrapper, .swiper-slide, .swiper-pagination'));
+  var nodes = Array.from(swiperContainerNode.querySelectorAll('.swiper-wrapper, .swiper-slide, .swiper-pagination'));
   nodes.forEach(function (node) {
     node.swiperClasses = [];
 
@@ -98,7 +128,6 @@ function addSwiperClasses(swiperContainerNode) {
     node.swiperClasses = [];
   });
 }
-
 
 tabletScreen.addListener(breakpointChecker);
 phoneScreen.addListener(breakpointChecker);
