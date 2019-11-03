@@ -190,7 +190,7 @@
   }
 
   .swiper-slide {
-    & .swiper-slide-active {
+    &.swiper-slide-active {
       transform: scale(1.15, 1.25);
       z-index: 1;
 
@@ -274,7 +274,7 @@
   }
 
   .swiper-slide {
-    & .swiper-slide-active {
+    &.swiper-slide-active {
       transform: scale(1, 1);
 
       & svg {
