@@ -279,7 +279,7 @@
 }
 
 .social__link {
-  display: block;
+  display: flex;
 
   & path {
     fill: #666666;
@@ -306,8 +306,18 @@
   }
 
   &--fb {
+    .social__image--light {
+      display: none;
+    }
+
     &:hover {
-      filter: brightness(0) invert(1);
+      .social__image--light {
+        display: block;
+      }
+
+      .social__image--dark {
+        display: none;
+      }
     }
 
     &:active {
