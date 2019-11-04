@@ -3,9 +3,16 @@
   height: 134px;
 }
 
+.advantages .swiper-disabled {
+  transform: none;
+}
+
 .advantages {
-  background-color: transparent;
+  position: relative;
   margin: -213px 0 0;
+
+  background-color: transparent;
+  overflow: hidden;
 
   &__list {
     display: flex;
@@ -31,9 +38,8 @@
       padding: 5px 0 0 0;
 
       & p {
-        margin: 22px 0 0 0;
+        margin: 22px 0 0 13px;
         width: 253px;
-        padding: 0 0 0 12px;
       }
 
       & svg {
@@ -51,9 +57,8 @@
       padding: 21px 0 0 0;
 
       & p {
-        margin: 21px 0 0 0;
+        margin: 21px 0 0 22px;
         width: 163px;
-        padding: 0 0 0 21px;
       }
 
       & svg {
@@ -72,9 +77,8 @@
       margin: 0;
 
       & p {
-        margin: 22px 0 0 0;
+        margin: 22px 0 0 30px;
         width: 230px;
-        padding: 0 0 0 31px;
       }
 
       & svg {
@@ -86,10 +90,10 @@
         }
       }
     }
+  }
 
-    &__bullets {
-      display: none;
-    }
+  &__bullets {
+    display: none;
   }
 }
 
@@ -172,8 +176,7 @@
     display: flex;
     align-items: center;
 
-    // bottom: 6px;
-    bottom: -501px;
+    bottom: 6px;
     left: 48.2%;
 
     width: 54px;
@@ -253,7 +256,7 @@
 
     & > .pagination {
       left: 45.3%;
-      bottom: -534px;
+      bottom: 7px;
 
       & .swiper-pagination-bullet {
         width: 6px;

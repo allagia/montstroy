@@ -4,7 +4,7 @@ var tabletScreen = window.matchMedia('(max-width: 1023px)');
 var phoneScreen = window.matchMedia('(max-width: 767px)');
 var swiperObjServices;
 var swiperObjPartners;
-var currentScreenSize = 'desktop';
+var currentScreenSize = '';
 var swiperNodeServices = document.querySelector('.swiper-container-services');
 var swiperNodePartners = document.querySelector('.swiper-container-partners');
 var swiperParamsDefault = {
@@ -32,36 +32,21 @@ function breakpointChecker() {
   if (tabletScreen.matches) {
     if (currentScreenSize !== 'tablet') {
       currentScreenSize = 'tablet';
-      if (swiperObjServices) {
-        disableSwiper(swiperObjServices);
-      }
-      if (swiperObjPartners) {
-        disableSwiper(swiperObjPartners);
-      }
+      disableSwiper([swiperObjServices, swiperObjPartners]);
     }
     swiperObjServices = enableSwiper(swiperNodeServices, swiperParamsDefault);
     swiperObjPartners = enableSwiper(swiperNodePartners, swiperParamsDefault);
   } else if (phoneScreen.matches) {
     if (currentScreenSize !== 'phone') {
       currentScreenSize = 'phone';
-      if (swiperObjServices) {
-        disableSwiper(swiperObjServices);
-      }
-      if (swiperObjPartners) {
-        disableSwiper(swiperObjPartners);
-      }
+      disableSwiper([swiperObjServices, swiperObjPartners]);
     }
     swiperObjServices = enableSwiper(swiperNodeServices, swiperParamsDefault);
     swiperObjPartners = enableSwiper(swiperNodePartners, swiperParamsDefault);
   } else {
     if (currentScreenSize !== 'desktop') {
       currentScreenSize = 'desktop';
-      if (swiperObjServices) {
-        disableSwiper(swiperObjServices);
-      }
-      if (swiperObjPartners) {
-        disableSwiper(swiperObjPartners);
-      }
+      disableSwiper([swiperObjServices, swiperObjPartners]);
     }
     swiperObjPartners = enableSwiper(swiperNodePartners, swiperParamsPartnersDesktop);
   }
@@ -73,9 +58,15 @@ function enableSwiper(swiperNode, swipersParams) {
   return new window.Swiper(swiperNode, swipersParams);
 }
 
-function disableSwiper(swiperObj) {
-  removeSwiperClasses(swiperObj.el);
-  swiperObj.destroy(true, true);
+function disableSwiper(swiperObjs) {
+  swiperObjs.forEach(function (swiperObj) {
+    if (swiperObj) {
+      if (swiperObj.el) {
+        removeSwiperClasses(swiperObj.el);
+      }
+      swiperObj.destroy(true, true);
+    }
+  });
 }
 
 function removeSwiperClasses(swiperContainerNode) {

@@ -1,3 +1,7 @@
+.partners {
+  overflow: hidden;
+}
+
 .partners__title {
   position: relative;
 
@@ -9,8 +13,6 @@
   letter-spacing: 1px;
 
   margin: 25px 0 38px 0;
-  // margin: 25px 374px 38px;
-
 
   color: #000000;
 
@@ -44,10 +46,6 @@
 
   display: flex;
   left: -136px;
-
-  // margin: 0 240px;
-
-  // transform: translate3d(0, 0, 0);
 }
 
 .partners__bullets {
@@ -106,7 +104,7 @@
   display: flex;
   width: 116px;
   height: 34px;
-  top: 106px;
+  top: 105px;
   right: 40px;
 
   border: 2px solid rgb(36, 36, 36);
