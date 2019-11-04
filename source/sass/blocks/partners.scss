@@ -228,6 +228,13 @@
       }
     }
 
+    &--heat-energy {
+      & a {
+        opacity: 0.5;
+        background-image: url("../img/heat-energy-tablet.svg");
+      }
+    }
+
     &:last-child {
       margin: 0;
     }
@@ -276,13 +283,13 @@
     }
   }
 
-  .swiper-slide {
-    &.swiper-slide-active {
-      a {
-        background-size: 150px 123px;
-      }
-    }
-  }
+  // .swiper-slide {
+  //   &.swiper-slide-active {
+  //     a {
+  //       // background-size: 150px 123px;
+  //     }
+  //   }
+  // }
 }
 
 @media (max-width: 767px) {
