@@ -28,6 +28,7 @@
     flex-wrap: wrap;
 
     width: 32%;
+    min-width: 333px;
 
     text-transform: uppercase;
 
@@ -38,6 +39,8 @@
 
   &__item {
     margin: 9px 19px 20px 0;
+    // margin: 9px 5% 20px 0;
+    // width: 12%;
   }
 
   &__link {
@@ -113,8 +116,8 @@
   }
 
   .page-nav {
-    max-width: 680px;
-    padding: 0 20px;
+    max-width: 100%;
+    padding: 0 63px;
 
     &__logo {
       width: 19%;
