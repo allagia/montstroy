@@ -101,9 +101,9 @@
     display: none;
   }
 
-  &--first {
-    margin: 0 auto 43px 33.5%;
-  }
+  // &--first {
+  //   margin: 0 auto 43px 33.5%;
+  // }
 
   &__link {
     cursor: pointer;
@@ -141,6 +141,8 @@
     }
 
     &__list {
+      flex-direction: column;
+
       margin: 22px 0 0 0;
 
       & div {
@@ -153,16 +155,18 @@
     }
 
     &__item {
-      width: 100%;
+      width: 49%;
       min-height: 50px;
       height: auto;
-      margin: 0 0 10px 0;
+      margin: 0 0 10px auto;
       padding: 0;
 
       box-shadow: none;
 
       &--first {
-        width: 48.5%;
+        position: absolute;
+
+        width: 46%;
         margin: 0 20px 10px 0;
       }
 
@@ -175,21 +179,13 @@
           margin: 0;
         }
       }
-
-      &:nth-child(3n) {
-        margin: 0 auto 10px 0;
-      }
-
-      &:nth-child(2n) {
-        margin: 0 0 10px 0;
-      }
     }
   }
 
   .subservice {
-    position: relative;
-
     &__title {
+      position: relative;
+
       font-weight: normal;
       font-size: 14px;
       line-height: 1.4;
@@ -212,8 +208,9 @@
       & svg {
         display: block;
         position: absolute;
-        top: 24px;
-        right: 22px;
+        top: 23px;
+        right: 20px;
+
         opacity: 0.3;
       }
 
@@ -309,6 +306,8 @@
       width: 100%;
 
       &--first {
+        position: static;
+
         width: 100%;
         margin: 0 0 10px 0;
       }
@@ -342,6 +341,9 @@
       padding: 18px 0 0 22px;
       letter-spacing: 0;
 
+      & svg {
+        top: 21px;
+      }
 
       &--long {
         padding: 7px 0 0 20px;
