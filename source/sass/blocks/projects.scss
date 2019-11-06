@@ -44,7 +44,7 @@
 .projects__item {
   display: flex;
 
-  width: 24.9%;
+  width: 24.87%;
   min-height: 290px;
   margin: 0 2px 2px 0;
 
@@ -52,11 +52,13 @@
     background-color: #000000;
   }
 
-  &:nth-child(2n) {
+  &:nth-child(4),
+  &:nth-child(6) {
     margin: 0 0 2px 0;
   }
 
   &--long {
+    min-width: 49%;
     flex-grow: 1;
   }
 }
@@ -92,7 +94,6 @@
 
   width: 100%;
   padding: 28px 11px 0 30px;
-  margin: 0 2px 0 0;
 
   background-size: cover;
 
